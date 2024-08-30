@@ -1,0 +1,51 @@
+[{
+    "id": 1,
+    "image": "Resource/mikasa.jpg",
+    "hint": "This character is known for her exceptional combat skills and has a deep connection to the main protagonist.",
+    "answer": "Mikasa Ackerman"
+    
+  },
+  {
+    "id": 2,
+    "image": "Resource/sungjinwoo.jpg",
+    "hint": "He starts as a weak hunter but gains powerful abilities and becomes incredibly strong, much like leveling up in a game.",
+    "answer": "Sung Jinwoo"
+    
+  },
+  {
+    "id": 3,
+    "image": "Resource/sugawara.jpg",
+    "hint": "He is the vice-captain of Karasuno High's volleyball team and is renowned for his exceptional setting skills and supportive leadership.",
+    "answer": "Koshi Sugawara"
+    
+  },
+  {
+    "id": 4,
+    "image": "Resource/mitsuha.jpg",
+    "hint": "She’s a high school girl from a rural town who swaps bodies with a boy from Tokyo and dreams of escaping her small town.",
+    "answer": "Mitsuha Miyamizu"
+    
+  },
+  {
+    "id": 5,
+    "image": "Resource/rengoku.jpg",
+    "hint": "This character is known as the Flame Hashira and is famous for his fiery fighting style and unwavering dedication to protecting others.",
+    "answer": "Kyojuro Rengoku"
+    
+  },
+  {
+    "id": 6,
+    "image": "Resource/mash.jpg",
+    "hint":"In a world where magic is everything, this character has no magic but compensates with superhuman strength and a love for cream puffs.",
+    "answer": "Mash Burnedead"
+    
+  },
+  {
+    "id": 7,
+    "image": "Resource/nobara.jpg",
+    "hint": "She’s a jujutsu sorcerer who uses a hammer and nails to fight curses, known for her strong personality and distinct voodoo-like techniques.",
+    "answer": "Nobara Kugisaki"
+    
+  }
+
+]
