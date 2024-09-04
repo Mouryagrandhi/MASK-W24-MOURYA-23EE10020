@@ -18,6 +18,7 @@
 }
 
 body {
+    position: relative;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -86,6 +87,7 @@ header .divider {
 }
 
 main {
+    position:relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,6 +109,7 @@ main h2 {
 }
 
 #quizcontainer {
+    position: relative;
     background-color: #603d3dc7;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -124,9 +127,10 @@ main h2 {
 }
 
 #hint {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 10px;
-    font-weight: 800;
+    font-weight: 700;
+    
     color: var(--mixwhite);
 }
 
@@ -176,6 +180,7 @@ button:hover {
 }
 
 #btn {
+    position:relative;
     display: flex;
     justify-content: center;
     align-items: normal;
@@ -183,11 +188,7 @@ button:hover {
     flex-wrap: wrap;
 }
 
-#btnf{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
+
 
 #result-area {
     display: none;
@@ -231,6 +232,7 @@ button:hover {
 }
 
 footer {
+    position: relative;
     background-color: var(--shadow-gray);
     color: var(--off-white);
     text-align: center;
