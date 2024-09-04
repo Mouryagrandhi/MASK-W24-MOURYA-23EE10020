@@ -10,7 +10,7 @@ const ans = document.getElementById('input');
 const nxt = document.getElementById('nxtbtn');
 const prev = document.getElementById('prevbtn');
 const sub = document.getElementById('submitbtn');
-const finsub = document.getElementById('finalsubbtn');
+
 const result = document.getElementById('result-area');
 const questarea = document.getElementById('questionarea');
 const quizcont= document.getElementById('quizcontainer');
@@ -23,7 +23,7 @@ fetch('questions.json')
   });
 
 function displayQuestion() {
-  questarea.classList.remove('active'); // Start fade out
+  questarea.classList.remove('active'); 
 
   setTimeout(() => {
     const question = questions[currentQuestionIndex];
@@ -34,8 +34,8 @@ function displayQuestion() {
     nxt.style.display = currentQuestionIndex === questions.length - 1 ? 'none' : 'block';
     prev.style.display = currentQuestionIndex === 0 ? 'none' : 'block';
 
-    questarea.classList.add('active'); // start fade in
-  }, 300); 
+    questarea.classList.add('active');
+  }, 150); 
 }
 
 sub.addEventListener('click', () => {
@@ -51,6 +51,34 @@ sub.addEventListener('click', () => {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     displayQuestion();
+  }
+  if(currentQuestionIndex === questions.length){
+    questarea.classList.remove('active');
+    setTimeout(() => {
+      let resultsHTML = `<h2>Quiz Results</h2><p>Your Score: ${score}/${questions.length}</p>`;
+    
+      questions.forEach((q, index) => {
+        const userAnswer = userAns[index] || 'N/A';
+        const isCorrect = userAnswer.toLowerCase() === q.answer.toLowerCase();
+        resultsHTML += `
+          <div>
+            <p>Question: ${q.hint}</p>
+            <p>Your Answer: ${userAnswer}</p>
+            <p>${isCorrect ? 'Correct!' : `Incorrect! The correct answer was ${q.answer}.`}</p>
+          </div>`;
+      });
+  
+      result.innerHTML = resultsHTML;
+      questarea.style.display = 'none';
+      result.style.display = 'block';
+      
+      setTimeout(() => {
+        result.classList.add('active');
+      });
+      
+    });
+
+
   }
 });
 
@@ -68,33 +96,6 @@ prev.addEventListener('click', () => {
   }
 });
 
-finsub.addEventListener('click', () => {
-  questarea.classList.remove('active');//start fadeout
-  
-  
-  setTimeout(() => {
-    let resultsHTML = `<h2>Quiz Results</h2><p>Your Score: ${score}/${questions.length}</p>`;
-  
-    questions.forEach((q, index) => {
-      const userAnswer = userAns[index] || 'N/A';
-      const isCorrect = userAnswer.toLowerCase() === q.answer.toLowerCase();
-      resultsHTML += `
-        <div>
-          <p>Question: ${q.hint}</p>
-          <p>Your Answer: ${userAnswer}</p>
-          <p>${isCorrect ? 'Correct!' : `Incorrect! The correct answer was ${q.answer}.`}</p>
-        </div>`;
-    });
 
-    result.innerHTML = resultsHTML;
-    questarea.style.display = 'none';
-    result.style.display = 'block';
-    
-    setTimeout(() => {
-      result.classList.add('active');
-    }, 300);
-    
-  }, 300);
-});
 
 
